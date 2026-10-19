@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Radio button menyimpan pilihan halaman; Biodata aktif saat halaman pertama dibuka. -->
+    <input class="tab-control" type="radio" name="profil-tab" id="tab-biodata" checked>
+    <input class="tab-control" type="radio" name="profil-tab" id="tab-pendidikan">
+    <input class="tab-control" type="radio" name="profil-tab" id="tab-pengalaman">
+    <input class="tab-control" type="radio" name="profil-tab" id="tab-keahlian">
+    <input class="tab-control" type="radio" name="profil-tab" id="tab-publikasi">
+
+    <!-- Header berisi identitas pemilik profil dan tautan untuk menuju konten utama. -->
+    <header class="site-header">
+      <a class="brand" href="#main-content" aria-label="Profil Mahasiswa">
+        <figure class="brand-photo"><img src="foto-profil.png" alt="Foto profil Habibie Ahmad"></figure>
+        <span>
+          <strong>Profil Mahasiswa</strong>
+          <small>Cerita di balik identitas</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <p class="status"><span></span>Profil publik</p>
+        <a class="share-button" href="mailto:?subject=Profil%20Mahasiswa%20Habibie%20Ahmad">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .88 2.12L8.91 10.2a3.05 3.05 0 0 0-1.91-.7 3 3 0 1 0 1.91 5.31l6.97 4.08A3 3 0 1 0 17 17a3.05 3.05 0 0 0-1.91.69l-6.97-4.08a3.06 3.06 0 0 0 0-1.22l6.97-4.08A3.05 3.05 0 0 0 18 8Z"/></svg>
+          Bagikan profil
+        </a>
+      </div>
+    </header>
+
+    <!-- Grid membagi halaman menjadi navigasi, konten utama, dan informasi hobi. -->
+    <div class="content-grid">
+      <!-- Label menu memilih radio button dengan ID yang sama; CSS lalu mengganti section. -->
+      <nav class="profile-nav" aria-label="Jelajahi profil">
+        <p class="nav-title">Jelajahi profil</p>
+        <ul>
+          <li>
+            <label class="nav-item nav-biodata" for="tab-biodata">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
+              <span>Biodata</span>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item nav-pendidikan" for="tab-pendidikan">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 10-10-5-10 5 10 5 10-5ZM6 12v5c3 2 9 2 12 0v-5"/></svg>
+              <span>Pendidikan</span>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item nav-pengalaman" for="tab-pengalaman">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Zm0 0V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1M9 13h6"/></svg>
+              <span>Pengalaman</span>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item nav-keahlian" for="tab-keahlian">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v7M12 15v7M5 5l5 5M14 14l5 5M2 12h7M15 12h7M5 19l5-5M14 10l5-5"/></svg>
+              <span>Keahlian</span>
+            </label>
+          </li>
+          <li>
+            <label class="nav-item nav-publikasi" for="tab-publikasi">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15Z"/></svg>
+              <span>Publikasi</span>
+            </label>
+          </li>
+        </ul>
+        <p class="nav-note">Setiap perjalanan dimulai dari mengenal diri sendiri.</p>
+      </nav>
+
+      <!-- main adalah konten utama; setiap section menyimpan satu kategori informasi profil. -->
+      <main id="main-content" class="profile-main">
+        <!-- Section awal yang terlihat karena tab-biodata memiliki atribut checked. -->
+        <section class="content-card panel panel-biodata" aria-labelledby="biodata-title">
+          <div class="section-head">
+            <h1 id="biodata-title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/></svg>
+              Biodata
+            </h1>
+            <p>Profil personal</p>
+          </div>
+
+          <div class="identity">
+            <div>
+              <p class="eyebrow">Nama lengkap</p>
+              <h2>Habibie Ahmad</h2>
+            </div>
+          </div>
+
+          <div class="info-grid">
+            <article class="info-tile">
+              <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm4 4h4M7 13h2M14 11h3M14 15h4"/></svg>NIM</p>
+              <strong>2025081041</strong>
+            </article>
+            <article class="info-tile">
+              <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>Agama</p>
+              <strong>Islam</strong>
+            </article>
+            <article class="info-tile">
+              <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/></svg>Tanggal lahir</p>
+              <strong>11 April 2007</strong>
+            </article>
+            <article class="info-tile">
+              <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Zm0-8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>Tempat lahir</p>
+              <strong>Tangerang Selatan</strong>
+            </article>
+          </div>
+
+          <div class="section-copy">
+            <strong>Belajar, berkarya, dan berbagi.</strong>
+            <p>Mengenal saya melalui biodata, perjalanan, dan hal-hal yang saya sukai.</p>
+          </div>
+        </section>
+
+        <!-- Riwayat pendidikan ditampilkan ketika menu Pendidikan dipilih. -->
+        <section class="content-card panel panel-pendidikan" aria-labelledby="pendidikan-title">
+          <div class="section-head">
+            <h1 id="pendidikan-title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 10-10-5-10 5 10 5 10-5ZM6 12v5c3 2 9 2 12 0v-5"/></svg>
+              Pendidikan
+            </h1>
+            <p>Riwayat akademik</p>
+          </div>
+
+          <div class="timeline">
+            <article>
+              <span>2025 - Sekarang</span>
+              <h2>Universitas Pembangunan Jaya</h2>
+              <p>Program studi Sistem Informasi. Fokus pada desain antarmuka, basis data, dan pengembangan web.</p>
+            </article>
+            <article>
+              <span>2022 - 2025</span>
+              <h2>SMK Fadilah</h2>
+              <p>Mempelajari dasar pemrograman, jaringan komputer, desain digital, dan kerja proyek kelompok.</p>
+            </article>
+            <article>
+              <span>2019 - 2022</span>
+              <h2>SMP Amelia</h2>
+              <p>Aktif dalam kegiatan literasi digital dan mulai tertarik pada dunia UI/UX.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Pengalaman proyek dan aktivitas. -->
+        <section class="content-card panel panel-pengalaman" aria-labelledby="pengalaman-title">
+          <div class="section-head">
+            <h1 id="pengalaman-title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Zm0 0V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1M9 13h6"/></svg>
+              Pengalaman
+            </h1>
+            <p>Aktivitas proyek</p>
+          </div>
+
+          <div class="experience-grid">
+            <article>
+              <span>UI/UX Designer</span>
+              <h2>Redesign Profil Mahasiswa</h2>
+              <p>Menyusun wireframe, visual system, dan layout responsif untuk halaman profil personal.</p>
+            </article>
+            <article>
+              <span>Front-end Learner</span>
+              <h2>Website Portfolio</h2>
+              <p>Mengubah rancangan visual menjadi HTML semantic dan CSS responsif.</p>
+            </article>
+            <article>
+              <span>Team Project</span>
+              <h2>Aplikasi Akademik Sederhana</h2>
+              <p>Membantu riset kebutuhan pengguna, membuat flow, serta merapikan tampilan dashboard.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Keahlian; nilai --level dipakai CSS untuk menentukan panjang indikator. -->
+        <section class="content-card panel panel-keahlian" aria-labelledby="keahlian-title">
+          <div class="section-head">
+            <h1 id="keahlian-title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v7M12 15v7M5 5l5 5M14 14l5 5M2 12h7M15 12h7M5 19l5-5M14 10l5-5"/></svg>
+              Keahlian
+            </h1>
+            <p>Kemampuan utama</p>
+          </div>
+
+          <div class="skill-list">
+            <article>
+              <div><span>UI Design</span><strong>90%</strong></div>
+              <p>Membuat visual interface, komponen, dan tampilan responsif.</p>
+              <i style="--level: 90%"></i>
+            </article>
+            <article>
+              <div><span>UX Research</span><strong>82%</strong></div>
+              <p>Mengamati kebutuhan pengguna dan menyusun user flow.</p>
+              <i style="--level: 82%"></i>
+            </article>
+            <article>
+              <div><span>HTML & CSS</span><strong>86%</strong></div>
+              <p>Membangun halaman semantic dengan styling modern.</p>
+              <i style="--level: 86%"></i>
+            </article>
+          </div>
+        </section>
+
+        <!-- Artikel dan karya yang dimasukkan ke bagian publikasi. -->
+        <section class="content-card panel panel-publikasi" aria-labelledby="publikasi-title">
+          <div class="section-head">
+            <h1 id="publikasi-title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15Z"/></svg>
+              Publikasi
+            </h1>
+            <p>Catatan karya</p>
+          </div>
+
+          <div class="publication-list">
+            <article>
+              <span>Artikel</span>
+              <h2>Mendesain Profil Mahasiswa yang Mudah Dibaca</h2>
+              <p>Catatan tentang hierarki visual, kontras, dan konsistensi komponen.</p>
+            </article>
+            <article>
+              <span>Studi Kasus</span>
+              <h2>Layout Responsif untuk Identitas Personal</h2>
+              <p>Eksplorasi empat breakpoint dari desktop hingga smartphone.</p>
+            </article>
+            <article>
+              <span>Dokumentasi</span>
+              <h2>Komponen Navigasi Profil Interaktif</h2>
+              <p>Penerapan navigasi tanpa library untuk menukar konten section.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <!-- aside memuat informasi pendamping yang melengkapi profil, yaitu hobi. -->
+      <aside class="hobby-card" aria-labelledby="hobi-title">
+        <h2 id="hobi-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v7M12 15v7M5 5l5 5M14 14l5 5M2 12h7M15 12h7M5 19l5-5M14 10l5-5"/></svg>
+          Hobi
+        </h2>
+        <p class="hobby-intro">Hal-hal kecil yang memberi energi di luar rutinitas.</p>
+        <div class="hobby-list">
+          <article>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4ZM5 6H3a3 3 0 0 0 3 3h1M19 6h2a3 3 0 0 1-3 3h-1"/></svg></span>
+            <div><h3>GYM</h3><p>Membuat otak menjadi fresh</p></div>
+          </article>
+          <article>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-9h.01"/></svg></span>
+            <div><h3>Bola</h3><p>Kerja sama di lapangan</p></div>
+          </article>
+          <article>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6M14 4l-4 16"/></svg></span>
+            <div><h3>Pemrograman</h3><p>Dari ide menjadi karya</p></div>
+          </article>
+        </div>
+        <blockquote>Selalu ada hal baru untuk dipelajari.</blockquote>
+      </aside>
+    </div>
+
+    <!-- Footer berisi tautan sosial media dan informasi hak cipta. -->
+    <footer class="site-footer">
+      <address>
+        <a href="https://twitter.com/" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.9c-.7.3-1.5.6-2.4.7.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.7 1A4.1 4.1 0 0 0 11.6 9c0 .3 0 .6.1.9A11.7 11.7 0 0 1 3.2 5.6a4.1 4.1 0 0 0 1.3 5.5c-.6 0-1.3-.2-1.8-.5v.1c0 2 1.4 3.6 3.3 4-.3.1-.7.2-1.1.2-.3 0-.5 0-.8-.1.5 1.7 2.1 2.9 3.9 2.9A8.3 8.3 0 0 1 2 19.3 11.7 11.7 0 0 0 8.3 21c7.5 0 11.7-6.2 11.7-11.7v-.5c.8-.5 1.5-1.2 2-1.9Z"/></svg>
+          <span>Twitter: @akun</span>
+        </a>
+        <a href="https://facebook.com/" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1Z"/></svg>
+          <span>FB: @akun</span>
+        </a>
+        <a href="https://instagram.com/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm6-10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg>
+          <span>Instagram: @akun</span>
+        </a>
+      </address>
+      <p>&copy; Copyright 2026. All Rights Reserved</p>
+      <div>
+        <strong>Profil Mahasiswa</strong>
+        <span>Ruang cerita, karya, dan perjalanan.</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
+
+
